@@ -21,7 +21,8 @@ exports.generateImage = async(req, res) =>{
         const imageUrl = response.data.data[0].url
         res.status(200).json({
             success: true,
-            data: imageUrl
+            url: imageUrl,
+            alt: prompt
         })
     } catch (error) {
         if (error.response) {
